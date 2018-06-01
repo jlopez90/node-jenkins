@@ -1,0 +1,33 @@
+{
+  "name": "node-jenkins",
+  "version": "1.0.0",
+  "description": "Test integration node express jenkins",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlopez90/node-jenkins.git"
+  },
+  "keywords": [
+    "jenkins",
+    "node",
+    "express"
+  ],
+  "author": "jlopez90@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlopez90/node-jenkins/issues"
+  },
+  "homepage": "https://github.com/jlopez90/node-jenkins#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.1",
+    "supertest": "^3.1.0"
+  }
+}

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/.bin/nyc ./node_modules/mocha/bin/_mocha --timeout=3000",
+    "lint": "./node_modules/.bin/eslint index.js",
+    "coverage": "istanbul cover npm test > test.tap && istanbul report clover"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,12 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
     "should": "^13.2.1",
     "supertest": "^3.1.0"
   }

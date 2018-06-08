@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "./node_modules/mocha/bin/_mocha test/*.js --timeout=3000 --exit",
-    "lint": "./node_modules/.bin/eslint -f checkstyle index.js > checkstyle-result.xml",
+    "lint": "./node_modules/.bin/eslint index.js",
+    "ci-lin": "./node_modules/.bin/eslint -f checkstyle index.js > checkstyle-result.xml",
     "coverage": "./node_modules/.bin/istanbul cover -x *.test.js _mocha -- -R spec test/index.test.js > test.tap --exit",
     "check-coverage": "./node_modules/.bin/istanbul check-coverage --statements 80 --branches 100 --functions 100 --lines 80"
   },
